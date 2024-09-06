@@ -3,13 +3,80 @@ export default {
   darkMode: ['class'],
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    screens: {
+      lg: '1024px',
+      sm: '640px',
+      xl: '1280px',
+      xxl: '1400px',
+      xs: '360px',
+      md: '768px',
+    },
+    container: {
+      padding: {
+        // падинги контейнера на разных экранах
+        DEFAULT: '0.9375rem',
+        center: true,
+        // sm: '0.9375rem',
+        // lg: '0.9375rem',
+        // xl: '0.9375rem',
+      },
+    },
     extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
+      fontSize: {
+        H1: ['2.25rem', { fontWeight: '700', lineHeight: '2.475rem' }],
+        H2: ['2rem', { fontWeight: '700', lineHeight: '2.375rem' }],
+        H3: ['1.5rem', { fontWeight: '600', lineHeight: '1.875rem' }],
+        'big-title': ['1.25rem', { fontWeight: '600', lineHeight: '1.5rem' }],
+        'regular-text': ['1rem', { fontWeight: '400', lineHeight: '1.25rem' }],
+        'big-button': ['0.875rem', { fontWeight: '700', lineHeight: '1.125rem' }],
+        title: ['1rem', { fontWeight: '700', lineHeight: '1.25rem' }],
+        'small-button': ['0.75rem', { fontWeight: '600', lineHeight: '1rem' }],
+        'small-text': ['0.75rem', { fontWeight: '400', lineHeight: '1rem' }],
+        paragraph: ['0.875rem', { fontWeight: '400', lineHeight: '1.375rem' }],
+      },
+      fontWeight: {
+        'semibold-700': '600',
+        'medium-500': '500',
+        'regular-400': '400',
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+
       colors: {
+        Primary: {
+          300: '#FFC046',
+          500: '#FF6934',
+        },
+        Blue: {
+          100: '#59C3FF',
+          300: '#257CFF',
+        },
+        Danger: {
+          500: '#ED2828',
+        },
+        Gray: {
+          100: '#FFFFFF',
+          300: '#F5F5F5',
+          500: '#E9ECF2',
+          700: '#808D9E',
+          900: '#1D1E25',
+        },
+        Dark: {
+          900: '#141414',
+        },
+        Success: {
+          100: '#80FFBF',
+          300: '#48BD69',
+          700: '#0F9954',
+          900: '#0A6638',
+        },
+        // Shad_cn ui colors
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
