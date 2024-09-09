@@ -9,13 +9,12 @@ type Props = {
 /** Общий Лайаут для всех страниц */
 export const BaseAppLayout = ({ children }: Props) => {
   /* const { data: meData } = useMeQuery() */ // авторизован ли я?
-  const isAuth = true
 
   return (
     <>
-      <Header isAuth={isAuth} />
-      <Sidebar isAuth={isAuth} />
-      <Main>{children}</Main>
+      {/*<Header isAuth={isAuth} />*/}
+      {/*<Sidebar isAuth={isAuth} />*/}
+      <main>{children}</main>
     </>
   )
 }
